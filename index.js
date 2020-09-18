@@ -1,7 +1,7 @@
 var Highcharts = require('highcharts');
 require('highcharts/modules/exporting')(Highcharts);
-require('highcharts/modules/solid-gauge')(Highcharts);
 require('highcharts/highcharts-more')(Highcharts);
+require('highcharts/modules/solid-gauge')(Highcharts);
 
  Highcharts.chart('container', {
   chart: {
@@ -23,31 +23,37 @@ require('highcharts/highcharts-more')(Highcharts);
   },
   yAxis: {
     stops: [
-      [
-        0.5,
-        {
-          linearGradient: {
-            x1: 0,
-            x2: 0,
-            y1: 0,
-            y2: 1
-          },
-          stops: [[0, "#0000ff"], [1, "#e3e3f4"]]
-        }
-      ]
+      [0.5, {
+        linearGradient: {
+          x1: 0,
+          x2: 0,
+          y1: 0,
+          y2: 1
+        },
+        stops: [
+          [0, '#005CBF'],
+          [1, '#112B48']
+        ]
+      }]
     ],
-    lineWidth: 0,
     minorTickInterval: null,
-    tickPixelInterval: 400,
     tickWidth: 0,
-    title: {
-      y: -70
-    },
+    gridLineWidth: 0,
+    gridLineColor: 'transparent',
+    lineWidth: 0,
     labels: {
-      y: 16
+      enabled: false
+    },
+    title: {
+      y: 75,
+      text: 'second',
+      useHTML: true,
+      style: {
+        color: '#ffffff',
+        fontSize: '20px'
+      }
     }
   },
-
   plotOptions: {
     solidgauge: {
       dataLabels: {
@@ -56,5 +62,6 @@ require('highcharts/highcharts-more')(Highcharts);
         useHTML: true
       }
     }
-  }
+  },
+  series: [{ data: [10] }]
 });
