@@ -46,7 +46,7 @@ require('highcharts/modules/solid-gauge')(Highcharts);
     },
     title: {
       y: 75,
-      text: 'second',
+      text: '',
       useHTML: true,
       style: {
         color: '#ffffff',
