@@ -2,5 +2,8 @@
   "name": "js",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "highcharts": "^8.2.0",
+    "highcharts-more": "^0.1.7"
+  }
 }
